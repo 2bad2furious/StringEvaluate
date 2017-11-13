@@ -10,6 +10,8 @@ public class Main {
         String expression = sc.nextLine();
 
         /*String expression = "(5*(8-(2+4)/5)*(3+8))/2";*/
-        System.out.println(new ExpressionParser().getExpression(expression).count());
+        ExpressionParser parser = new ExpressionParser();
+        Expression expression1 = parser.getExpression(expression);
+        System.out.println(expression1.count());
     }
 }

@@ -13,7 +13,7 @@ public class StringUtils {
 
     public static int getIndexOfCharNotInsidePairOfTwoChars(String haystack, char needle, char c1, char c2) {
         int opened = 0, closed = 0;
-        for (int i = 0; i < haystack.length(); i++) {
+        for (int i = haystack.length() - 1; i >= 0; i--) {
             char curChar = haystack.charAt(i);
 
             if (curChar == needle && opened == closed) return i;
